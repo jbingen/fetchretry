@@ -42,7 +42,7 @@ const res = await fetchRetry("https://api.example.com/data", {
 
 Every production app needs retry logic for HTTP calls. Transient 503s, rate limits, network blips - they all need the same pattern: retry with backoff, respect `Retry-After`, time out eventually, and let the caller abort.
 
-Everyone writes this. Nobody writes it the same way twice. fetchretry does it in ~90 lines with zero dependencies.
+Everyone writes this. Nobody writes it the same way twice. fetchretry does it with zero dependencies.
 
 ## API
 
@@ -144,7 +144,7 @@ const fetch = createFetchRetry({
 
 ## Design decisions
 
-- Zero dependencies. ~90 lines of TypeScript.
+- Zero dependencies. Tiny footprint.
 - Returns a standard `Response` - no custom wrapper, no `.json()` override, no magic.
 - Exponential backoff by default, `Retry-After` takes precedence when present.
 - Timeout is per-attempt, not total. Each retry gets a fresh timeout window.
