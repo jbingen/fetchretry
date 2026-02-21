@@ -1,7 +1,7 @@
 # 🔁 fetchretry
 
-[![npm version](https://img.shields.io/npm/v/fetchretry)](https://www.npmjs.com/package/fetchretry)
-[![npm bundle size](https://img.shields.io/npm/unpacked-size/fetchretry)](https://www.npmjs.com/package/fetchretry)
+[![npm version](https://img.shields.io/npm/v/@jbingen/fetchretry)](https://www.npmjs.com/package/@jbingen/fetchretry)
+[![npm bundle size](https://img.shields.io/npm/unpacked-size/@jbingen/fetchretry)](https://www.npmjs.com/package/@jbingen/fetchretry)
 [![license](https://img.shields.io/github/license/jbingen/fetchretry)](https://github.com/jbingen/fetchretry/blob/main/LICENSE)
 
 Tiny fetch wrapper with retries, exponential backoff, timeout, and abort support.
@@ -9,7 +9,7 @@ Tiny fetch wrapper with retries, exponential backoff, timeout, and abort support
 For anyone tired of writing try/catch/sleep loops around every API call.
 
 ```
-npm install fetchretry
+npm install @jbingen/fetchretry
 ```
 
 ```typescript
@@ -27,7 +27,7 @@ const res = await fetchRetry(url);
 Returns a standard `Response`. Works everywhere `fetch` works.
 
 ```typescript
-import { fetchRetry } from "fetchretry";
+import { fetchRetry } from "@jbingen/fetchretry";
 
 const res = await fetchRetry("https://api.example.com/data");
 
@@ -51,7 +51,7 @@ Everyone writes this. Nobody writes it the same way twice. fetchretry does it in
 Pre-configured instance using global `fetch`. Drop-in replacement with retry defaults.
 
 ```typescript
-import { fetchRetry } from "fetchretry";
+import { fetchRetry } from "@jbingen/fetchretry";
 
 const res = await fetchRetry("https://api.example.com/data");
 ```
@@ -61,7 +61,7 @@ const res = await fetchRetry("https://api.example.com/data");
 Creates a configured instance. Use this to set base options or provide a custom fetch.
 
 ```typescript
-import { createFetchRetry } from "fetchretry";
+import { createFetchRetry } from "@jbingen/fetchretry";
 
 const apiFetch = createFetchRetry({
   retries: 5,

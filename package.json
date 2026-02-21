@@ -1,5 +1,5 @@
 {
-  "name": "fetchretry",
+  "name": "@jbingen/fetchretry",
   "version": "0.1.0",
   "description": "Tiny fetch wrapper with retries, exponential backoff, timeout, and abort support.",
   "type": "module",
